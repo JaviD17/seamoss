@@ -13,7 +13,6 @@ const PostPage = ({ post }: any) => {
       ) : (
         <>
           <h1 className="text-4xl">{post.title}</h1>
-
           <div>by {post.author.name}</div>
         </>
       )}
