@@ -7,7 +7,7 @@ export default async function BlogPage() {
   // console.log(posts[0].body[0].children);
   // console.log(posts);
   return (
-      <ul className="grid grid-cols-3 gap-4">
+      <ul className="grid grid-cols-3 gap-4 my-16 justify-items-center">
         {posts.map((post: any) => (
           <li key={post._id}>
             <Link href={`/blog/${post.slug}`}>

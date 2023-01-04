@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
 const PostPage = ({ post }: any) => {
-  console.log(post);
+  // console.log(post);
   const slug = post?.slug;
   if (!slug) {
     notFound();

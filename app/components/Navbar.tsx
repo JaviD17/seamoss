@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const categories = [
   {
@@ -20,50 +21,44 @@ const categories = [
   },
 ];
 
+//   <motion.button
+//     whileHover={{ scale: 1.1 }}
+//     whileTap={{ scale: 0.9 }}
+//   />
+
 const Navbar = () => {
   return (
-    // <nav className="bg-emerald-500 h-16 rounded-lg mt-4 flex justify-between drop-shadow-xl">
-    //   <div className="basis-1/2 flex justify-start items-center">
-    //     {categories.map((item) => (
-    //       <Link key={item.href} href={item.href} className=" mx-4 text-2xl">
-    //         {item.name}
-    //       </Link>
-    //     ))}
-    //   </div>
-    //   <div className="basis-1/4 flex justify-end mx-4 items-center gap-2">
-    //     <AiOutlineShoppingCart size={36} />
-    //     <RxAvatar size={36} />
-    //   </div>
-    // </nav>
-    <div className="navbar bg-primary my-4 rounded-xl drop-shadow-2xl h-16">
-      <div className="">
-        <Link href={"/"}>
-          <div className="overflow-hidden hover:bg-base-100 h-12 rounded-xl">
-            <Image
-              src="/seamoss.png"
-              alt="logo"
-              width={125}
-              height={125}
-              className="-mt-8"
-            />
-          </div>
-        </Link>
-      </div>
-      <div className="flex-1 flex justify-center">
-        {categories.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className=" mx-4 hover:bg-base-100 rounded-xl"
-          >
-            <button
-              type="button"
-              className="btn btn-ghost shadow-none text-2xl"
-            >
-              {item.name}
-            </button>
-          </Link>
-        ))}
+    <div className="navbar bg-primary my-4 rounded-xl drop-shadow-2xl h-20">
+      <Link href={"/"} className="mx-4">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="overflow-hidden hover:bg-base-100 h-12 rounded-xl"
+        >
+          <Image
+            src="/seamoss.png"
+            alt="logo"
+            width={125}
+            height={125}
+            className="-mt-8"
+          />
+        </motion.div>
+      </Link>
+
+      <div className="flex-1 justify-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          {categories.map((item) => (
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className=''>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="mx-2 text-xl hover:bg-base-100"
+              >
+                {item.name}
+              </Link>
+            </motion.li>
+          ))}
+        </ul>
         <div className="overflow-hidden "></div>
       </div>
       <div className="flex-none flex gap-2">

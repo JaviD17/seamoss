@@ -14,6 +14,7 @@ const postFields = groq`
 export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
   ${postFields}
+  "mainImage": mainImage.asset
 }`;
 
 export const postAndMoreStoriesQuery = groq`
