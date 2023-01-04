@@ -36,7 +36,7 @@ const Navbar = () => {
     //   </div>
     // </nav>
     <div className="navbar bg-primary my-4 rounded-xl drop-shadow-2xl h-16">
-      <div className="flex-1 relative">
+      <div className="">
         <Link href={"/"}>
           <div className="overflow-hidden hover:bg-base-100 h-12 rounded-xl">
             <Image
@@ -49,24 +49,28 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className="flex-none">
+      <div className="flex-1 flex justify-center">
+        {categories.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className=" mx-4 hover:bg-base-100 rounded-xl"
+          >
+            <button
+              type="button"
+              className="btn btn-ghost shadow-none text-2xl"
+            >
+              {item.name}
+            </button>
+          </Link>
+        ))}
+        <div className="overflow-hidden "></div>
+      </div>
+      <div className="flex-none flex gap-2">
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <div className="indicator">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
+              <AiOutlineShoppingCart size={30} />
               <span className="badge badge-sm indicator-item">8</span>
             </div>
           </label>
