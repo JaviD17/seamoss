@@ -2,16 +2,11 @@ import Link from "next/link";
 import { getAllPosts } from "../../lib/sanity.client";
 import Card from "../components/Card";
 
-// export async function generateStaticParams() {
-//   return await getAllPostsSlugs();
-// }
-
 export default async function BlogPage() {
   const posts = await getAllPosts();
   // console.log(posts[0].body[0].children);
   // console.log(posts);
   return (
-    <section className="container">
       <ul className="grid grid-cols-3 gap-4">
         {posts.map((post: any) => (
           <li key={post._id}>
@@ -21,7 +16,6 @@ export default async function BlogPage() {
           </li>
         ))}
       </ul>
-    </section>
   );
 }
 
