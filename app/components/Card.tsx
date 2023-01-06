@@ -12,7 +12,7 @@ import { urlFor } from "../../lib/sanity.client";
 // )
 
 const Card = ({ post }: any) => {
-  console.log(post.mainImage);
+  // console.log(post.mainImage);
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}

@@ -44,11 +44,10 @@ const Navbar = () => {
         className="flex justify-start gap-6 basis-2/5"
       >
         {categories.map((item) => (
-          <Link href={item.href}>
+          <Link href={item.href} key={item.href}>
             <motion.li
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              key={item.href}
               className="text-base hover:bg-gray-400 font-semibold py-1 px-2 rounded-md"
             >
               {item.name}

@@ -12,8 +12,8 @@ export default async function SlugRoute({
 }) {
   // console.log(params);
   const { slug } = params;
-  const post = getPostBySlug(slug);
-  return <PostPage post={await post} />;
+  const post = await getPostBySlug(slug);
+  return <PostPage post={post} />;
 }
 
 // FIXME: remove the `revalidate` export below once you've followed the instructions in `/pages/api/revalidate.ts`
