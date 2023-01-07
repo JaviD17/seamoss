@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { HiOutlineUserCircle, HiOutlineShoppingCart } from "react-icons/hi";
-import { RxAvatar } from "react-icons/rx";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -36,11 +35,11 @@ const categories = [
 
 const Navbar = () => {
   return (
-    <nav className="hidden lg:flex items-center px-8 bg-gray-200">
+    <nav className="hidden lg:flex items-center px-8 bg-slate-100">
       <motion.ul
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.75 }}
         className="flex justify-start gap-6 basis-2/5"
       >
         {categories.map((item) => (
@@ -48,7 +47,7 @@ const Navbar = () => {
             <motion.li
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-base hover:bg-gray-400 font-semibold py-1 px-2 rounded-md"
+              className="text-base hover:bg-green-300 font-semibold py-2 px-2 rounded-md"
             >
               {item.name}
             </motion.li>
@@ -249,20 +248,20 @@ const Navbar = () => {
       <motion.ul
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.75 }}
         className="flex gap-2 justify-end basis-2/5"
       >
         <motion.li
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="hover:bg-gray-400 rounded-full p-1.5"
+          className="hover:bg-green-300 rounded-full p-1.5"
         >
           <HiOutlineUserCircle size={36} />
         </motion.li>
         <motion.li
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="hover:bg-gray-400 rounded-full p-1.5"
+          className="hover:bg-green-300 rounded-full p-1.5"
         >
           <HiOutlineShoppingCart size={36} />
         </motion.li>

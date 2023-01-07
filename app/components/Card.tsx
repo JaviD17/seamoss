@@ -17,7 +17,7 @@ const Card = ({ post }: any) => {
     <motion.div
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="card w-96 bg-base-100 shadow-xl"
+      className="w-96 shadow-xl rounded-xl overflow-hidden"
     >
       <figure>
         <Image
@@ -28,14 +28,14 @@ const Card = ({ post }: any) => {
           className="object-cover"
         />
       </figure>
-      <div className="card-body h-44">
-        <h2 className="card-title">
+      <div className="h-44">
+        <h2 className="">
           {post.title}
-          <div className="badge badge-accent">New</div>
+          <div className="">New</div>
         </h2>
         <p>by {post.author.name}</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Benefits</div>
+        <div className="">
+          <div className="">Benefits</div>
         </div>
       </div>
     </motion.div>

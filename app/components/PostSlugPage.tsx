@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-const PostPage = ({ post }: any) => {
+const PostSlugPage = ({ post }: any) => {
   // console.log(post);
   const slug = post?.slug;
   if (!slug) {
@@ -20,4 +20,4 @@ const PostPage = ({ post }: any) => {
   );
 };
 
-export default PostPage;
+export default PostSlugPage;
