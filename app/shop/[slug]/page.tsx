@@ -1,4 +1,3 @@
-import PostPage from "../../components/ProductSlugPage";
 import { getAllPostsSlugs, getProductBySlug } from "../../../lib/sanity.client";
 import ProductSlugPage from "../../components/ProductSlugPage";
 

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { urlFor } from "../../lib/sanity.client";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { HiStar, HiOutlineStar } from "react-icons/hi";
 
 const PostSlugPage = ({ product }: any) => {
