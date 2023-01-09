@@ -1,16 +1,15 @@
-import Link from "next/link";
-import { getAllPosts } from "../../lib/sanity.client";
+import { getAllProducts } from "../../lib/sanity.client";
 import Card from "../components/Card";
 
 export default async function ShopPage() {
-  const posts = await getAllPosts();
+  const products = await getAllProducts();
   // console.log(posts[0].body[0].children);
-  // console.log(posts);
+  console.log(products);
   return (
     <ul className="grid grid-cols-3 gap-4 p-16 justify-items-center">
-      {posts.map((post: any) => (
-        <li key={post._id}>
-          <Card post={post} />
+      {products.map((product: any) => (
+        <li key={product._id}>
+          <Card product={product} />
         </li>
       ))}
     </ul>

@@ -13,17 +13,18 @@ import { HiStar, HiOutlineStar } from "react-icons/hi";
 //   />
 // )
 
-const Card = ({ post }: any) => {
+const Card = ({ product }: any) => {
   // console.log(post.mainImage);
   return (
     <motion.div
       initial={{ scale: 1 }}
       whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 1.0 }}
       className="w-[400px] shadow-xl shadow-slate-200/75 rounded-md overflow-hidden"
     >
-      <Link href={`/shop/${post.slug}`}>
+      <Link href={`/shop/${product.slug}`}>
         <Image
-          src={urlFor(post.mainImage).width(800).height(400).url()}
+          src={urlFor(product.mainImage).width(800).height(400).url()}
           alt="Shoes"
           width={800}
           height={400}
@@ -31,7 +32,7 @@ const Card = ({ post }: any) => {
         />
       </Link>
       <div className="h-40 max-h-40 p-4 text-center flex flex-col justify-between">
-        <h2 className="font-semibold text-xl">{post.title}</h2>
+        <h2 className="font-semibold text-xl">{product.title}</h2>
         <div className="flex justify-center">
           <HiStar className="text-green-500" size={20} />
           <HiStar className="text-green-500" size={20} />

@@ -1,5 +1,16 @@
 import { groq } from "next-sanity";
 
+const productFields = groq`
+  _id,
+  title,
+  description,
+  flavor,
+  launchedAt,
+  "mainImage": mainImage.asset,
+  productImages,
+  sizes,
+  "slug": slug.current,
+  `;
 const postFields = groq`
   _id,
   title,
@@ -9,6 +20,11 @@ const postFields = groq`
   "slug": slug.current,
   "author": author->{name, picture},
 `;
+
+export const productQuery = groq`
+*[_type == "product"] | order( date desc, _updatedAt desc) {
+  ${productFields}
+}`;
 // export const indexQuery = groq`
 // *[_type == "post"] | order(date desc, _updatedAt desc)`;
 export const indexQuery = groq`
@@ -29,9 +45,17 @@ export const postAndMoreStoriesQuery = groq`
   }
 }`;
 
+export const productSlugsQuery = groq`
+*[_type == "product" && defined(slug.current)][].slug.current`;
+
 export const postSlugsQuery = groq`
 *[_type == "post" && defined(slug.current)][].slug.current
 `;
+
+export const productBySlugQuery = groq`
+*[_type == "product" && slug.current == $slug][0] {
+  ${productFields}
+}`;
 
 export const postBySlugQuery = groq`
 *[_type == "post" && slug.current == $slug][0] {
@@ -55,4 +79,16 @@ export interface Post {
   slug?: string;
   content?: any;
   body?: any;
+}
+
+export interface Product {
+  _id: string;
+  title: string;
+  description: [];
+  flavor: string;
+  launchedAt: string;
+  mainImage: {};
+  productImages: [];
+  sizes: [];
+  slug: string;
 }

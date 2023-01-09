@@ -1,6 +1,6 @@
-import PostPage from "../../components/PostSlugPage";
-import { getAllPostsSlugs, getPostBySlug } from "../../../lib/sanity.client";
-import PostSlugPage from "../../components/PostSlugPage";
+import PostPage from "../../components/ProductSlugPage";
+import { getAllPostsSlugs, getProductBySlug } from "../../../lib/sanity.client";
+import ProductSlugPage from "../../components/ProductSlugPage";
 
 export async function generateStaticParams() {
   return await getAllPostsSlugs();
@@ -13,8 +13,8 @@ export default async function SlugRoute({
 }) {
   // console.log(params);
   const { slug } = params;
-  const post = await getPostBySlug(slug);
-  return <PostSlugPage post={post} />;
+  const product = await getProductBySlug(slug);
+  return <ProductSlugPage product={product} />;
 }
 
 // FIXME: remove the `revalidate` export below once you've followed the instructions in `/pages/api/revalidate.ts`
