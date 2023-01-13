@@ -4,6 +4,7 @@ specifiers:
   '@next/env': ^13.1.1
   '@next/font': 13.1.1
   '@portabletext/react': ^2.0.0
+  '@sanity/icons': ^2.2.2
   '@sanity/image-url': ^1.0.1
   '@sanity/ui': 1.0.5
   '@sanity/vision': ^3.1.2
@@ -30,6 +31,7 @@ dependencies:
   '@next/env': 13.1.1
   '@next/font': 13.1.1
   '@portabletext/react': 2.0.0_react@18.2.0
+  '@sanity/icons': 2.2.2_react@18.2.0
   '@sanity/image-url': 1.0.1
   '@sanity/ui': 1.0.5_23mhwjhnzfjwvdn7ol54k26zom
   '@sanity/vision': 3.1.2_23mhwjhnzfjwvdn7ol54k26zom
@@ -40,7 +42,7 @@ dependencies:
   eslint-config-next: 13.1.1_iukboom6ndih5an6iafl45j2fe
   framer-motion: 8.1.5_biqbaboplfbrettd7655fr4n2y
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
-  next-sanity: 3.1.9_36eg5kdlrhmfx54vb5rkqng43a
+  next-sanity: 3.1.9_ivqtc3p6yyezf5ge5kpnt3kss4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
@@ -1070,8 +1072,8 @@ packages:
       - supports-color
     dev: false
 
-  /@sanity/icons/2.2.0_react@18.2.0:
-    resolution: {integrity: sha512-S8fYK/gtpc5gxZK4XzPLK9dGe3T75nmvCHIkhFg2pK+rcUbVjgZ1HOQ8zYP0aypsI42aZjuKFlp1uafbavjF+g==}
+  /@sanity/icons/2.2.2_react@18.2.0:
+    resolution: {integrity: sha512-+Ks6LeYe44kjZSfcWFWj0zQRP48N3JisrZ9ia44QwG11y6bO9Wk8bfhu5o23FkyYrREu9CzQ0U+slSV7YsvcuQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: ^18
@@ -1275,7 +1277,7 @@ packages:
     dependencies:
       '@floating-ui/react-dom': 1.1.0_biqbaboplfbrettd7655fr4n2y
       '@sanity/color': 2.2.0
-      '@sanity/icons': 2.2.0_react@18.2.0
+      '@sanity/icons': 2.2.2_react@18.2.0
       csstype: 3.1.1
       framer-motion: 7.10.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -1296,7 +1298,7 @@ packages:
     dependencies:
       '@floating-ui/react-dom': 1.1.0_biqbaboplfbrettd7655fr4n2y
       '@sanity/color': 2.2.0
-      '@sanity/icons': 2.2.0_react@18.2.0
+      '@sanity/icons': 2.2.2_react@18.2.0
       csstype: 3.1.1
       framer-motion: 8.1.5_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -1355,7 +1357,7 @@ packages:
       '@rexxars/react-json-inspector': 8.0.1_react@18.2.0
       '@rexxars/react-split-pane': 0.1.93_biqbaboplfbrettd7655fr4n2y
       '@sanity/color': 2.2.0
-      '@sanity/icons': 2.2.0_react@18.2.0
+      '@sanity/icons': 2.2.2_react@18.2.0
       '@sanity/ui': 1.0.8_23mhwjhnzfjwvdn7ol54k26zom
       '@uiw/react-codemirror': 4.19.5_ertk66s3cw4coawuuzxizjd23e
       hashlru: 2.3.0
@@ -4569,7 +4571,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: false
 
-  /next-sanity/3.1.9_36eg5kdlrhmfx54vb5rkqng43a:
+  /next-sanity/3.1.9_ivqtc3p6yyezf5ge5kpnt3kss4:
     resolution: {integrity: sha512-HL9e0UjOzriRYggNH2Jf4xcLEOwlKUJfVM3g0Qlg9Lo4h0TXGfYf/CjMVxDebE01kQ7BWLSAgWbpjzI1rzpR1Q==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -4593,6 +4595,7 @@ packages:
         optional: true
     dependencies:
       '@sanity/client': 3.4.1
+      '@sanity/icons': 2.2.2_react@18.2.0
       '@sanity/preview-kit': 1.2.15_react@18.2.0
       '@sanity/ui': 1.0.5_23mhwjhnzfjwvdn7ol54k26zom
       '@sanity/webhook': 2.0.0
@@ -5532,7 +5535,7 @@ packages:
       '@sanity/eventsource': 3.0.3
       '@sanity/export': 3.1.2
       '@sanity/generate-help-url': 3.0.0
-      '@sanity/icons': 2.2.0_react@18.2.0
+      '@sanity/icons': 2.2.2_react@18.2.0
       '@sanity/image-url': 1.0.1
       '@sanity/import': 3.1.2
       '@sanity/logos': 2.1.0_hfqu6pedblvwag6dyuiek6j7xe

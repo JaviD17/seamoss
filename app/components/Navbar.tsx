@@ -20,16 +20,16 @@ const categories = [
     href: "/shop",
   },
   {
-    name: "Bundles",
-    href: "/bundles",
+    name: "Explore",
+    href: "/explore",
   },
   {
     name: "Recipes",
     href: "/recipes",
   },
   {
-    name: "Our Company",
-    href: "/our-company",
+    name: "Our Story",
+    href: "/our-story",
   },
 ];
 

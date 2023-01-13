@@ -10,6 +10,8 @@ const productFields = groq`
   productImages,
   sizes,
   "slug": slug.current,
+  body,
+  nutrition
   `;
 const postFields = groq`
   _id,
@@ -91,4 +93,6 @@ export interface Product {
   productImages: [];
   sizes: [];
   slug: string;
+  body: string;
+  nutrition: string;
 }

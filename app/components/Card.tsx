@@ -14,7 +14,6 @@ import { HiStar, HiOutlineStar } from "react-icons/hi";
 // )
 
 const Card = ({ product }: any) => {
-  // console.log(post.mainImage);
   return (
     <motion.div
       initial={{ scale: 1 }}

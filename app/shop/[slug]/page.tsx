@@ -1,8 +1,8 @@
-import { getAllPostsSlugs, getProductBySlug } from "../../../lib/sanity.client";
+import { getAllProductsSlugs, getProductBySlug } from "../../../lib/sanity.client";
 import ProductSlugPage from "../../components/ProductSlugPage";
 
 export async function generateStaticParams() {
-  return await getAllPostsSlugs();
+  return await getAllProductsSlugs();
 }
 
 export default async function SlugRoute({

@@ -69,5 +69,19 @@ export default defineType({
       type: "array",
       of: [{ type: "size" }],
     }),
+    defineField({
+      name: "body",
+      title: "Body",
+      type: "array",
+      description: "Write a Product Description",
+      of: [{ type: "block" }],
+    }),
+    defineField({
+      name: "nutrition",
+      title: "Nutrition",
+      type: "array",
+      description: "Nutrition Facts",
+      of: [{ type: "block" }],
+    }),
   ],
 });
