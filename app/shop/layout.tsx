@@ -1,3 +1,5 @@
+"use client";
+import { CartContext, useCartContext } from "../../context/CartContext";
 import Navbar from "../components/Navbar";
 
 export default function ShopLayout({
@@ -6,9 +8,11 @@ export default function ShopLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <Navbar />
-      <section className="">{children}</section>
-    </>
+    <CartContext>
+      <section className="relative">
+        <Navbar shop={true} />
+        {children}
+      </section>
+    </CartContext>
   );
 }

@@ -7,6 +7,7 @@ import { urlFor } from "../../lib/sanity.client";
 import { useState } from "react";
 import { HiStar, HiOutlineStar } from "react-icons/hi";
 import { PortableText } from "@portabletext/react";
+import { HiOutlinePlus, HiOutlineMinus } from "react-icons/hi";
 
 const categories = ["Description", "Nutrition", "FAQ's", "Testimonials"];
 
@@ -128,7 +129,7 @@ const ProductSlugPage = ({ product }: any) => {
                     }
                     className="px-4 py-2 bg-slate-200 rounded-l"
                   >
-                    -
+                    <HiOutlineMinus size={20} />
                   </button>
 
                   <input
@@ -145,7 +146,7 @@ const ProductSlugPage = ({ product }: any) => {
                     }
                     className="px-4 py-2 bg-slate-200 rounded-r"
                   >
-                    +
+                    <HiOutlinePlus size={20} />
                   </button>
                 </div>
                 <div className="flex gap-4">
@@ -191,9 +192,7 @@ const ProductSlugPage = ({ product }: any) => {
               <ul className="mx-48 py-8">
                 {product.body.map((item: any) => (
                   <li key={item.children[0]._key} className="list-none">
-                    <p className="my-8 text-base">
-                      {item.children[0].text}
-                    </p>
+                    <p className="my-8 text-base">{item.children[0].text}</p>
                   </li>
                 ))}
               </ul>
@@ -209,9 +208,9 @@ const ProductSlugPage = ({ product }: any) => {
                 </p>
                 <ul className="flex flex-col">
                   <li>
-                  <p className="mx-[500px] px-4 py-2 my-2 text-lg bg-cyan-300 rounded-lg">
-                        Serving Size: 2 ablespoons (28g)
-                      </p>
+                    <p className="mx-[500px] px-4 py-2 my-2 text-lg bg-cyan-300 rounded-lg">
+                      Serving Size: 2 ablespoons (28g)
+                    </p>
                   </li>
                   {product.nutrition.map((item: any) => (
                     <li key={item.children[0]._key} className="">

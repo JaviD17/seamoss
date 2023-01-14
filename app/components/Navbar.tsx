@@ -9,6 +9,9 @@ import {
 } from "react-icons/hi";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useCartContext } from "../../context/CartContext";
+import Cart from "./Cart";
+import { usePathname } from "next/navigation";
 
 const categories = [
   {
@@ -33,18 +36,14 @@ const categories = [
   },
 ];
 
-//   <motion.button
-//     whileHover={{ scale: 1.1 }}
-//     whileTap={{ scale: 0.9 }}
-//   />
-
-const Navbar = () => {
+const Navbar = ({shop}: any) => {
   const [open, setOpen] = useState(false);
   const [profile, setProfile] = useState(false);
+  const { showCart, setShowCart } = useCartContext() || {};
   return (
     <>
       {/* desktop devices */}
-      <nav className="hidden lg:flex items-center px-8 bg-slate-100">
+      <nav className="hidden lg:flex items-center px-8 bg-slate-100 relative">
         <motion.ul
           initial={{ x: -500, opacity: 0, scale: 0.5 }}
           animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -267,15 +266,22 @@ const Navbar = () => {
           >
             <HiOutlineUserCircle size={36} />
           </motion.li>
-          <motion.li
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="hover:bg-green-300 rounded-full p-1.5"
-          >
-            <HiOutlineShoppingCart size={36} />
-          </motion.li>
+          {shop && (
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="hover:bg-green-300 rounded-full p-1.5"
+            >
+              <HiOutlineShoppingCart
+                size={36}
+                onClick={() => setShowCart(!showCart)}
+              />
+            </motion.li>
+          )}
         </motion.ul>
       </nav>
+
+      <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
 
       {/* mobile devices */}
       <nav className="flex relative lg:hidden">
